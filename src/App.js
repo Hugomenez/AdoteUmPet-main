@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import '../src/style.css';
 
-function App() {
+function Header() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <header style={{ display: 'flex' }} data-color="padrao" data-theme="dark">
+      <div id="left">
+        <a href="/" id="logo">
+          <img src="/static/assets/img/LogoAdoteUmPet.png" alt="logo" />
         </a>
-      </header>
-    </div>
+        <a href="/" id="logoText">Adote um Pet</a>
+        <a className="la" href="/pet-faq/" id="duvidasFrequentes">Dúvidas frequentes</a>
+        <p className="la" id="filtro">
+          Filtros <span id="arrow">x</span>
+        </p>
+      </div>
+
+      <div id="right" style={{ display: 'flex' }}>
+        <i className="fi fi-br-menu-burger" id="menuIconMobile"></i>
+        <div id="search" style={{ display: 'flex' }}>
+          <i className="fi fi-br-search" id="searchIcon"></i>
+          <input
+            type="text"
+            name="search"
+            id="searchInp"
+            placeholder="Pesquisar"
+          />
+        </div>
+        <a href="/user/sign-in">
+          <button id="entrar">Entrar</button>
+        </a>
+      </div>
+
+      <div id="userNav" style={{ display: 'none' }}></div>
+    </header>
   );
 }
 
-export default App;
+export default Header;
