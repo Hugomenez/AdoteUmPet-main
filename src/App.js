@@ -1,17 +1,18 @@
 import React from 'react';
 import '../src/style.css';
+import '../src/HeadContent';
 
 function Header() {
   return (
     <header style={{ display: 'flex' }} data-color="padrao" data-theme="dark">
       <div id="left">
         <a href="/" id="logo">
-          <img src="/static/assets/img/LogoAdoteUmPet.png" alt="logo" />
+          <img src="src/imagens/LogoAdoteUmPet.png" alt="logo" />
         </a>
         <a href="/" id="logoText">Adote um Pet</a>
         <a className="la" href="/pet-faq/" id="duvidasFrequentes">Dúvidas frequentes</a>
         <p className="la" id="filtro">
-          Filtros <span id="arrow">x</span>
+          Filtros <span className='small-arrow'>&#9660;</span>
         </p>
       </div>
 

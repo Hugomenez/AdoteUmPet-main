@@ -1,4 +1,4 @@
-.header {
+header {
     position: fixed;
     right: 0;
     left: 0;
@@ -167,6 +167,13 @@
     color: var(--color-main-hover);
 }
 
+.small-arrow {
+    font-size: 7px;
+    position: relative;
+    top: -3px;
+}
+
+
 #userNav #trocarCargo {
     width: 100%;
     align-self: center;
@@ -242,6 +249,79 @@
 #adminButton:hover {
     background-color: rgb(233, 43, 43);
     transform: scale(1.05);
+}
+
+#search {
+    background-color: var(--color-card);
+    color: var(--color-fg);
+    border: 2px solid var(--color-border);
+    height: 2rem;
+    padding: 2px;
+    border-radius: 10px;
+    width: 20rem;
+    margin-right: 30px;
+    justify-content: space-evenly;
+}
+
+i {
+    font-style: italic;
+}
+
+#search i {
+    display: flex;
+    align-items: center;
+}
+
+#search input {
+    background-color: var(--color-card);
+    height: 100%;
+    width: 85%;
+    border: none;
+    border-radius: 8px;
+    color: var(--color-fg);
+}
+
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
+    overflow-clip-margin: 0px !important;
+    overflow: clip !important;
+}
+
+input[type="text" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {}
+
+[data-theme="dark"] {
+    --color-bg: #222222;
+    --color-fg: #fff;
+    --color-fg-hover: #fcfcfc49;
+    --color-fg-reverse: #252525;
+    --color-card: #333333;
+    --color-border: #fcfcfc49;
+}
+
+[data-color="padrao"] {
+    --color-contraste: #252525;
+    --color-main: #ffc401;
+    --color-main-hover: #e6b106;
+    --color-detail: #46cbff;
+    --color-detail-hover: #6CADC8;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    font-family: "Poppins";
 }
 
 @media screen and (max-width: 1015px) {
