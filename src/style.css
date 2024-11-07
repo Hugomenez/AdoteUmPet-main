@@ -281,18 +281,6 @@ i {
     color: var(--color-fg);
 }
 
-input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
-    overflow-clip-margin: 0px !important;
-    overflow: clip !important;
-}
-
-input[type="text" i] {
-    padding-block: 1px;
-    padding-inline: 2px;
-}
-
-input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {}
-
 [data-theme="dark"] {
     --color-bg: #222222;
     --color-fg: #fff;
